@@ -3,6 +3,7 @@
 __module_name__ = "mpv now playing"
 __module_version__ = "1"
 __module_description__ = "Displays mpv info"
+__module_author__ = "kuehnelth / null31"
 
 import socket
 import json
