@@ -28,7 +28,7 @@ def mpv_np(caller, callee, helper):
         return xchat.EAT_ALL
 
     time_pos = time.strftime('%H:%M:%S', time.gmtime(get_property(s, "time-pos")))
-    length   = time.strftime('%H:%M:%S', time.gmtime(get_property(s, "length")))
+    length   = time.strftime('%H:%M:%S', time.gmtime(get_property(s, "duration")))
     filename = get_property(s, "filename")
     version  = get_property(s, "mpv-version")
 
