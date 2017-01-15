@@ -31,9 +31,10 @@ def mpv_np(caller, callee, helper):
     time_pos = time.strftime('%H:%M:%S', time.gmtime(get_property(s, "time-pos")))
     length   = time.strftime('%H:%M:%S', time.gmtime(get_property(s, "duration")))
     filename = get_property(s, "filename")
+    render = get_property(s, "current-vo")
     version  = get_property(s, "mpv-version")
 
-    xchat.command("me now playing \x02%s\x0F [%s/%s] in %s" % (filename, time_pos, length, version))
+    xchat.command("me now playing \x02%s\x0F [%s/%s] rendering with %s in %s" % (filename, time_pos, length, render, version))
     s.close()
     return xchat.EAT_ALL
 
