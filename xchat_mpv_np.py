@@ -38,7 +38,7 @@ def mpv_np(caller, callee, helper):
     s.close()
     return xchat.EAT_ALL
 
-help_string = "Usage: /mpv \nSetup: Add 'input-unix-socket=~/.mpv/socket' to your ~/.mpv/config"
+help_string = "Usage: /mpv \nSetup: Add 'input-ipc-server=~/.config/mpv/socket' to your ~/.config/mpv/mpv.conf"
 xchat.hook_command(
     "mpv",
     mpv_np,
