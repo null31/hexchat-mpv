@@ -10,7 +10,7 @@ import socket
 import json
 from os.path import expanduser
 import time
-import xchat
+import hexchat
 
 def get_property(s, property):
     cmd = {"command": ["get_property", property]}
@@ -27,7 +27,7 @@ def mpv_np(caller, callee, helper):
         s.connect(expanduser("~") + "/.config/mpv/socket")
     except:
         print("Socket error")
-        return xchat.EAT_ALL
+        return hexchat.EAT_ALL
 
     time_pos = time.strftime('%H:%M:%S', time.gmtime(get_property(s, "time-pos")))
     length   = time.strftime('%H:%M:%S', time.gmtime(get_property(s, "duration")))
@@ -35,12 +35,12 @@ def mpv_np(caller, callee, helper):
     render = get_property(s, "current-vo")
     version  = get_property(s, "mpv-version")
 
-    xchat.command("me now playing \x02%s\x0F [%s/%s] rendering with %s in %s" % (filename, time_pos, length, render, version))
+    hexchat.command("me now playing \x02%s\x0F [%s/%s] rendering with %s in %s" % (filename, time_pos, length, render, version))
     s.close()
-    return xchat.EAT_ALL
+    return hexchat.EAT_ALL
 
 help_string = "Usage: /mpv \nSetup: Add 'input-ipc-server=~/.config/mpv/socket' to your ~/.config/mpv/mpv.conf"
-xchat.hook_command(
+hexchat.hook_command(
     "mpv",
     mpv_np,
     help = help_string
