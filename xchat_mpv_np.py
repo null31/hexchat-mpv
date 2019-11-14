@@ -1,9 +1,10 @@
 #!/usr/bin/env python
-# -*- coding: utf-8 -*-
-__module_name__ = "mpv now playing"
-__module_version__ = "1"
-__module_description__ = "Displays mpv info"
-__module_author__ = "kuehnelth / null31"
+#encoding=utf-8
+
+__module_name__ = "MPV now playing"
+__module_version__ = "2.0"
+__module_description__ = "Displays MPV info"
+__module_author__ = "kuehnelth (v1.0) / null31 (v2.0)"
 
 import socket
 import json
