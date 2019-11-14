@@ -23,7 +23,7 @@ def get_property(s, property):
 def mpv_np(caller, callee, helper):
     s = socket.socket(socket.AF_UNIX)
     try:
-        s.connect(expanduser("~") + "/.mpv/socket")
+        s.connect(expanduser("~") + "/.config/mpv/socket")
     except:
         print("Socket error")
         return xchat.EAT_ALL
