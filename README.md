@@ -1,9 +1,6 @@
-# XChat/Hexchat mpv now playing script
+# Hexchat MPV now playing script
 
-Forked from kuehnelth/xchat_mpv_np.
->Fixed the length property.
-
->Added render property.
+Original script from [kuehnelth/xchat\_mpv\_np](https://github.com/kuehnelth/xchat_mpv_np).
 
 Usage:
 ======
@@ -13,11 +10,10 @@ Usage:
 Setup:
 ======
 
-`xchat_mpv_np.py` uses the mpv [JSON IPC Protocol](http://mpv.io/manual/stable/#json-ipc).
-To enable it, add the following line to `~/.mpv/config`
-    input-unix-socket=~/.mpv/socket
+`mpv_np.py` uses the mpv [JSON IPC Protocol](https://mpv.io/manual/stable/#json-ipc).  
+To enable it, add the following line to `~/.config/mpv/mpv.conf` _input-ipc-server=~/.config/mpv/socket_
 
-`xchat_mpv_np_windows.py` works without any setup.
+`mpv_np_win.py` works without any setup.
 
 LICENSE
 =======
@@ -32,4 +28,3 @@ LICENSE
        TERMS AND CONDITIONS FOR COPYING, DISTRIBUTION AND MODIFICATION
 
       0. You just DO WHAT THE FUCK YOU WANT TO.
-    
